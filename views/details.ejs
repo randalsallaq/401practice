@@ -17,7 +17,7 @@
         
     </form>
 
-    <form action="/joke/<%= result.id %> ?_method=PUT" method="POST">
+    <form action="/joke/<%= result.id %> ?_method=DELETE" method="POST">
         <input hidden  type="text" name="id" value="<%= result.id %>">
         <input hidden  type="text" name="type" value="<%= result.type %>">
         <input hidden  type="text" name="setup" value="<%= result.setup %>">
