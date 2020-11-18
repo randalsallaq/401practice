@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/style.css">
+</head>
+<body>
+   
+    
+<% result.forEach(element=>{ %>
+
+<h3>Joke Number: <%= element.id %></h3>
+<p>type: <%= element.type %></p>
+<p>setup: <%= element.setup %></p>
+<p>punchline: <%= element.punchline %></p>
+
+<form action="/joke" method="POST">
+    <input hidden type="text" name="id" value="<%= element.id %>">
+    <input hidden type="text" name="type" value="<%= element.type %>">
+    <input hidden type="text" name="setup" value="<%= element.setup %>">
+    <input hidden type="text" name="punchline" value="<%= element.punchline %>">
+    <button type="submit" value="add">add to favorite</button>
+    
+
+</form>
+
+<%});%>
+
+
+
+
+
+
+
+</body>
+</html>

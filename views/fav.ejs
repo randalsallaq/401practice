@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/style.css">
+</head>
+<body>
+    
+
+    <% result.forEach(element=>{ %>
+
+        <h3>Joke Number: <%= element.jokenumber %></h3>
+        <p>type: <%= element.type %></p>
+        <p>setup: <%= element.setup %></p>
+        <p>punchline: <%= element.punchline %></p>
+
+        <a href="/joke/<%= element.id %>">show details</a>
+        
+
+        <%});%>
+
+</body>
+</html>
